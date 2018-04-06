@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: discovery
+
+server:
+  port: 8080
+eureka:
+  client:
+    #是否将自己注册到Eureka Server,由于当前应用就是Eureka Server，所以设为false
+    register-with-eureka: false
+    #是否从Eureka Server获取注册信息，单节点故为false
+    fetch-registry: false
+    #设置与Eureka Server交互的地址
+    service-url:
+      defaultZone: http://discovery:8080/eureka/
